@@ -1,0 +1,36 @@
+<view style='text-align: center;'>
+      <image src="{{userdata.img}}"  class="userinfo-avatar" mode="cover"></image>
+</view>
+
+<view>
+
+<form style='text-align: center;'  bindsubmit='onSubmit' bindreset='onReset'>
+  <view>昵称</view>
+ <input  class='input' name='name' type='number' placeholder='{{userdata.name}}'/>
+
+  <view>性别</view>
+  <radio-group class='xingbie' name='xingbie' >
+    <view  wx:for='{{radioItems}}' wx:key='item{{index}}'>
+     <radio  value='{{item.value}}' checked='{{item.checked}}' >{{item.name}}</radio></view>
+  </radio-group>
+
+<view >
+  <picker  style='margin-top: 20px;' name='region' mode='region'  bindchange='regionchange'>
+     <text>地区:</text>
+    <view  style='color:#aaa' hidden='{{region}}'>{{userdata.region}}</view>
+    <view  style='color:#aaa' wx:if='{{region}}'>{{region}}</view>
+  </picker>
+  <picker style='margin-top: 20px;' name='data' mode='date' bindchange='datachange'>
+  <text>生日:</text>
+    <view style='color:#aaa' hidden='{{region}}'>{{userdata.data}}</view>
+    <view style='color:#aaa' wx:if='{{region}}'>{{data}}</view>
+  </picker>
+  </view>
+<view style='margin:20px;'>个性签名</view>
+<textarea    name='beizhu'  placeholder="{{userdata.beizhu}}" ></textarea>
+
+  <button type='primary' form-type='submit'>提交</button>
+  <button type='default' form-type='reset'>重置</button>
+
+</form>
+</view>

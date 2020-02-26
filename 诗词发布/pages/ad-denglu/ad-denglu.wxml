@@ -1,0 +1,8 @@
+<view class='header'>
+<view style='text-align: center;font-size：50px;color:#aaa;'>管理员登录</view>
+<form style='text-align: center;'  bindsubmit='onSubmit' bindreset='onReset'>
+  <input class='input' name='id' type='number' placeholder='账号'/>
+  <input  class='input' name='password' type='password' placeholder='密码'/>
+  <button  type='primary' form-type='submit'>登录</button>
+</form>
+  </view>

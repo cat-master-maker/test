@@ -1,0 +1,42 @@
+.user-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.user-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  border-radius: 20%;
+}
+
+.user-name {
+  color: #aaa;
+  margin-top: 30px;
+}
+.work{
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  border: 3rpx solid #D4D4D4;
+  border-left-width: 5px;
+  border-left-color: #B22222;
+
+}
+.work-title{
+  text-align: center;
+  font-size: 35rpx;
+}
+.work-text{
+  text-align: center;
+  color:#aaa; 
+  font-size: 30rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+}
+.work-img{
+  text-align: center;
+}

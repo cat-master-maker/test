@@ -1,0 +1,34 @@
+
+<view   class='user-info'>
+<image  class='user-img'   src='{{workdata.data["0"].userimg}}' ></image>
+<view  class='user-name' >{{workdata.data["0"].username}}</view>
+<view   wx:if='{{workdata.data["0"].good==1}}' class='user-name'  style=' margin-left:10px;width:25px;height:25px;text-align: center;; background-color: #B22222;color:white;'>精</view>
+</view>
+<view class='work' >
+<text class='work-title'>{{workdata.data["0"].title}}</text>
+<text class='work-text' >{{workdata.data["0"].text}}</text>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{workdata.data["0"].img}}' src='{{workdata.data["0"].img}}'></image></view>
+
+<view    wx:for='{{comment.data}}' wx:key='item.id' class='comment'>
+<image mode='widthFix' style="width: 25px;margin-left:30px;"src='{{item.userimg}}'/>
+<view style='display: flex; flex-direction: column;margin-left:20px;'>
+<text  style='font-size:15px;color:#aaa;'>{{item.username}}</text>
+<text style='font-size:17px;'>{{item.texts}}</text>
+</view>
+<view wx:if='{{item.userid==userdata.id}}' style='position:fixed;right:20px;margin-top:10px;font-size:10px;color:#aaa;'  bindtap='shanchu' data-id='{{item.id}}'>删除</view>
+</view>
+<view style='height:100px;'></view>
+
+
+ <view class='bottom' >
+ <image  mode='widthFix' style="width: 25px;margin:15px;"  src='/pages/img/评论.png'></image>
+<form style='width:100%;'  bindsubmit='onSubmit' >
+<view style='display: flex; width:100%; justify-content: space-between; flex-direction: row;margin:15px;'>
+<input  style='font-size:15px;' name='text'   placeholder='评论'/>
+<button  style='right:20px;' size='mini' type='default' form-type='submit'>提交</button>
+
+</view>
+</form>
+ </view>

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/show/show",
+    "pages/person/person",
+    "pages/denglu/denglu",
+    "pages/ad-denglu/ad-denglu",
+    "pages/disadd/disadd",
+    "pages/adInterface/adinterface",
+    "pages/adjingxuan/adjingxuan",
+    "pages/huati/huati",
+    "pages/xiugaiziliao/xiugaiziliao",
+    "pages/userpage/userpage",
+    "pages/wordpage/wordpage",
+    "pages/huatipage/huatipage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B22222",
+    "navigationBarTitleText": "猫大师的诗词小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "原创",
+        "iconPath": "/pages/img/展示.png",
+        "selectedIconPath": "/pages/img/当前页面.png"
+      },
+      {
+        "pagePath": "pages/huati/huati",
+        "text": "话题",
+        "iconPath": "/pages/img/话题.png",
+        "selectedIconPath": "/pages/img/当前页面.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我",
+        "iconPath": "/pages/img/我.png",
+        "selectedIconPath": "/pages/img/当前页面.png"
+      }
+    ]
+  }
+}

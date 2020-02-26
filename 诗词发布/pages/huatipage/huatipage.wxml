@@ -1,0 +1,28 @@
+
+<view class='work' >
+<text class='work-title'>{{huatidata.data["0"].title}}</text>
+<text class='work-text'>{{huatidata.data["0"].text}}</text>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{huatidata.data["0"].img}}' src='{{huatidata.data["0"].img}}'></image></view>
+<view style='height:50px;'></view>
+<view    wx:for='{{comment.data}}' wx:key='item.id' class='comment'>
+<image mode='widthFix' style="width: 25px;margin-left:30px;"src='{{item.userimg}}'/>
+<view style='display: flex; flex-direction: column;margin-left:20px;'>
+<view  style='font-size:15px;color:#aaa;'>{{item.username}}</view>
+<view style='font-size:17px;'>{{item.texts}}</view>
+</view>
+<view wx:if='{{item.userid==userdata.id}}' style='position:fixed;right:20px;margin-top:10px;font-size:10px;color:#aaa;'  bindtap='shanchu' data-id='{{item.id}}'>删除</view>
+</view>
+
+<view style='height:100px;'></view>
+ <view class='bottom' >
+ <image  mode='widthFix' style="width: 25px;margin:15px;"  src='/pages/img/评论.png'></image>
+<form style='width:100%;'  bindsubmit='onSubmit' >
+<view style='display: flex; width:100%; justify-content: space-between; flex-direction: row;margin:15px;'>
+<input  style='font-size:15px;' name='text'   placeholder='评论'/>
+<button  style='right:20px;' size='mini' type='default' form-type='submit'>提交</button>
+
+</view>
+</form>
+ </view>

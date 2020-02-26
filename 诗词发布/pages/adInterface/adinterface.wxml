@@ -1,0 +1,32 @@
+<view class='header'>
+<view  style='color:#8470FF; border-bottom: 2rpx solid #8470FF;'  class='header-item'>用户</view>
+<view bindtap='fabuhuati'  class='header-item'>话题</view>
+<view bindtap='adjingxuan'  class='header-item'>精选</view>
+<view bindtap='tuichu'  class='header-item'>退出</view>
+</view>
+
+
+<form style='text-align: center;'  bindsubmit='onSubmit' bindreset='onReset'>
+<view style='color:#aaa;' >请输入查询内容</view>
+  <input  class='input' name='text' type='number' placeholder=''/>
+
+<view style='color:#aaa;'>选择查询方式</view>
+  <radio-group class='xingbie' name='type' >
+    <view  wx:for='{{radioItems}}' wx:key='item{{index}}'>
+     <radio  value='{{item.value}}' checked='{{item.checked}}' >{{item.name}}</radio></view>
+  </radio-group>
+    <button type='primary' form-type='submit'>提交</button>
+</form>
+
+<view wx:if='{{user.data["0"].id}}' class='chaxun'>--查询结果--</view>
+
+<view  class='user-info' wx:for='{{user.data}}' wx:key='item.id' >
+<scroll-view scroll-x style='white-space:nowrap'>
+
+<view class='user-header'>
+<image  class='user-img' mode='widthFix'  src='{{item.img}}' ></image>
+<view  class='user-name' >{{item.name}}-{{item.id}}-{{item.sex}}-{{item.data}}-{{item.region}}-{{item.password}}</view>
+</view>
+ </scroll-view>
+</view>
+

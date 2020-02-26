@@ -1,0 +1,42 @@
+ <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getinfo">授权使用微信头像与昵称登录</button>
+ 
+<view style='text-align: center;'>
+      <image src="{{userInfo.avatarUrl}}"  class="userinfo-avatar" mode="cover"></image>
+</view>
+
+<view>
+
+<form style='text-align: center;'  bindsubmit='onSubmit' bindreset='onReset'>
+  <view>昵称</view>
+<view>{{userInfo.nickName}}</view>
+
+<view>请输入登录账号</view>
+  <input  class='input' name='id' type='number' placeholder='建议为个人电话号码'/>
+
+  <view>请输入密码</view>
+  <input  class='input' name='password' type='password' placeholder='123456'/>
+
+  <view>性别</view>
+  <radio-group class='xingbie' name='xingbie' >
+    <view  wx:for='{{radioItems}}' wx:key='item{{index}}'>
+     <radio  value='{{item.value}}' checked='{{item.checked}}' >{{item.name}}</radio></view>
+  </radio-group>
+
+<view style='margin-top: 10px;'>
+  <picker style='margin-top: 20px;' name='region' mode='region'  bindchange='regionchange'>
+  <text>地区:</text>
+    <view  style='color:#aaa'>{{region}}</view>
+  </picker>
+  <picker style='margin-top: 20px;' name='data' mode='date' bindchange='datachange'>
+   <text>地区:</text>
+    <view  style='color:#aaa'>{{data}}</view>
+  </picker>
+  </view>
+<view style='margin:20px;'>个性签名</view>
+<textarea    name='beizhu'  placeholder="" ></textarea>
+
+  <button type='primary' form-type='submit'>提交</button>
+  <button type='default' form-type='reset'>重置</button>
+
+</form>
+</view>

@@ -1,0 +1,169 @@
+<image src='{{imagesurl}}' mode='aspectFill' style='z-index:-1;width: 100%;height:100%;position: fixed; background-color:#00FFFF;' />
+
+<view class='city'>
+  <image bindtap='autocity' src='/image/dingwei.png' mode='widthFix' style="width: 16px;" />
+  <picker mode='region' bindchange='onSelctRge'>{{weather.basic.location}}</picker>
+</view>
+
+<view style='text-align: center;font-size:14px;color:#FFFFFF;'>{{weather.update.loc}} 更新</view>
+
+<view class='weatherday'>
+  <view bindtap='scale' animation='{{animation}}' class='weatherday1'>{{weather.now.tmp}}º</view>
+  <view class='weatherday2' bindtap="show">
+    <view>{{weather.now.cond_txt}}</view>
+
+    <view>{{airday.air_now_city.qlty}} {{airday.air_now_city.aqi}}
+      <image src='/image/arrow.png' mode='widthFix' style="width: 13px;" />
+    </view>
+  </view>
+</view>
+
+<view hidden="{{flag}}" bindtap="hide" class='tankuang'>
+  <image src='/image/bg7.png' mode='widthFix' style="width:100%;" />
+  <view style='text-align: center; font-size:15px;color:#FFFFFF'>空气质量指数</view>
+  <view style='text-align: center; font-size:50px;color:#FFFFFF'>{{airday.air_now_city.aqi}}</view>
+  <view style=' background-color:{{aircolor}}; width:30% border-radius: 20rpx;  text-align: center; font-size:25px;color:#FFFFFF'>{{airday.air_now_city.qlty}}</view>
+  <view class='air1'>
+    <view class='air2'>
+      <view>{{airday.air_now_city.co}}</view>
+      <view style='font-size:15px;'>co</view>
+    </view>
+    <view class='air2'>
+      <view>{{airday.air_now_city.pm10}}</view>
+      <view style='font-size:15px;'>pm10</view>
+    </view>
+    <view class='air2'>
+      <view>{{airday.air_now_city.no2}}</view>
+      <view style='font-size:15px;'>no2</view>
+    </view>
+  </view>
+
+  <view class='air1'>
+    <view class='air2'>
+      <view>{{airday.air_now_city.o3}}</view>
+      <view style='font-size:15px;'>o3</view>
+    </view>
+    <view class='air2'>
+      <view>{{airday.air_now_city.pm25}}</view>
+      <view style='font-size:15px;'>pm25</view>
+    </view>
+    <view class='air2'>
+      <view>{{airday.air_now_city.so2}}</view>
+      <view style='font-size:15px;'>so2</view>
+    </view>
+  </view>
+
+  <view style='text-align:center;'>
+    <image src='/image/guanbi1.png' bindtap="hide" mode='widthFix' style="width: 30px;" />
+  </view>
+</view>
+
+
+
+
+
+<view bindtap='changebg' style='color:#FFFFFF; font-size:15px; margin:20px;'>{{lifeday[0].txt}}</view>
+
+
+<view style='margin-top: 30px; color:#FFFFFF;'>
+  <block wx:for='{{weatherweek}}' wx:key='item.date'>
+    <view class='yubao'>
+      <view>{{item.date}} </view>
+      <view>
+        <text style='display:flex; flex-direction:column; float:left;'>{{item.cond_txt_d}}</text>
+        <image src='https://cdn.heweather.com/cond_icon/{{item.cond_code_d}}.png' mode='widthFix' style="width: 30px;" />
+      </view>
+      <view>{{item.tmp_min}}℃~{{item.tmp_max}}℃</view>
+    </view>
+  </block>
+</view>
+
+
+<canvas animation='{{animation}}' canvas-id='myCanvas' style='width:100%;height:100px;margin-top:20px;'></canvas>
+<view style='text-align: center;font-size:20px;color:#FFFFFF'>未来三天气温变化</view>
+
+
+<view class='now'>
+  <view class='now2'>
+    <image src='/image/wind1.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>{{weather.now.wind_sc}}级</view>
+    <view class='ziti1'>{{weather.now.wind_dir}}</view>
+  </view>
+
+  <view class='now2'>
+    <image src='/image/shidu.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>{{weather.now.hum}}%</view>
+    <view class='ziti1'>空气湿度</view>
+  </view>
+
+
+  <view class='now2'>
+    <image src='/image/wendu.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>{{weather.now.fl}}%</view>
+    <view class='ziti1'>体感温度</view>
+  </view>
+
+  <view class='now2'>
+    <image src='/image/qiya.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>{{weather.now.pres}}hPa</view>
+    <view class='ziti1'>大气压强</view>
+  </view>
+
+</view>
+
+
+<view class='life'>
+  <view class='life2'>
+    <image src='/image/lvyou.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>旅游指数</view>
+    <view class='ziti1'>{{lifeday[4].brf}}</view>
+  </view>
+
+  <view class='life2'>
+    <image src='/image/yifu.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>穿衣指数</view>
+    <view class='ziti1'>{{lifeday[1].brf}}</view>
+  </view>
+
+
+  <view class='life2'>
+    <image src='/image/ziwaixian.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>紫外线指数</view>
+    <view class='ziti1'>{{lifeday[5].brf}}</view>
+  </view>
+
+  <view class='life2'>
+    <image src='/image/yundong.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>运动指数</view>
+    <view class='ziti1'>{{lifeday[3].brf}}</view>
+  </view>
+
+</view>
+
+<view class='life'>
+  <view class='life2'>
+    <image src='/image/ganmao.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>感冒指数</view>
+    <view class='ziti1'>{{lifeday[2].brf}}</view>
+  </view>
+
+  <view class='life2'>
+    <image src='/image/xiche.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>洗车指数</view>
+    <view class='ziti1'>{{lifeday[6].brf}}</view>
+  </view>
+
+
+  <view class='life2'>
+    <image src='/image/diaoyu.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>钓鱼指数</view>
+    <view class='ziti1'>{{lifeday[7].brf}}</view>
+  </view>
+
+  <view class='life2'>
+    <image src='/image/liangshai.png' mode='widthFix' style="width: 30px;" />
+    <view class='ziti'>晾晒指数</view>
+    <view class='ziti1'>{{lifeday[3].brf}}</view>
+  </view>
+
+</view>

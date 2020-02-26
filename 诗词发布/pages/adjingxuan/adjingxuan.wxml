@@ -1,0 +1,26 @@
+<view class='header'>
+<view  bindtap='chaxunyonghu'  class='header-item'>用户</view>
+<view bindtap='fabuhuati'  class='header-item'>话题</view>
+<view style='color:#8470FF; border-bottom: 2rpx solid #8470FF;'    class='header-item'>精选</view>
+<view bindtap='tuichu'  class='header-item'>退出</view>
+</view>
+<movable-area style="pointer-events: none;height: 100%;width: 100%;position:absolute;left:0px;top:0px;"> 
+<movable-view direction="all" style="pointer-events: auto;left:250px;top:500px;">
+ <image  bindtap="tianjia" src='../img/写字.png' mode='widthFix' style="width: 50px;"/>
+ </movable-view> </movable-area>
+
+ 
+<view wx:for='{{work.data}}' wx:key='item.id' >
+<view class='user-info'>
+<image  class='user-img'   src='{{item.userimg}}' ></image>
+<view  class='user-name' >{{item.username}}</view>
+<view  wx:if='{{item.good==0}}' style=' margin-left:10px;width:125px;height:25px;text-align: center;; background-color: #B22222;color:white;' data-id='{{item.id}}' bindtap='jingxuan'>设置为精选</view>
+<view   style=' margin-left:10px;width:125px;height:25px;text-align: center;; background-color: #B22222;color:white;' wx:if='{{item.good==1}}'  data-id='{{item.id}}' bindtap='disjingxuan'>取消精选</view>
+</view>
+<view class='work'>
+<view class='work-title'>{{item.title}}</view>
+<text class='work-text'>{{item.text}}</text>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{item.img}}' src='{{item.img}}'></image></view>
+</view>

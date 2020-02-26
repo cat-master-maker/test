@@ -1,0 +1,30 @@
+<view class='header'>
+<view  bindtap='chaxunyonghu'  class='header-item'>用户</view>
+<view style='color:#8470FF; border-bottom: 2rpx solid #8470FF;'  class='header-item'>话题</view>
+<view  bindtap='adjingxuan' class='header-item'>精选</view>
+<view  bindtap='tuichu' class='header-item'>退出</view>
+</view>
+
+<form  style=''  bindsubmit='onSubmit' bindreset='onReset'>
+  <input    class='datainput' name='title' type='text' placeholder='请输入标题'/>
+
+  <textarea  class='datatextarea'   name='word' selectable space
+  decode maxlength="-1"  auto-height placeholder="正文内容" auto-height />
+
+<image wx:if='{{src}}' src='{{src}}' mode='widthFix'></image>
+<image  bindtap="chooseImage" src='/pages/img/添加.png' mode='widthFix' style="width: 100px;" ></image>
+<view >
+  <button type='primary' form-type='submit'>提交</button>
+</view>
+</form>
+
+
+<view  class='shanchu'>--删除--</view>
+
+<view wx:for='{{work.data}}' wx:key='item.id' >
+<view class='work'>
+<view class='work-title'>{{item.title}}-{{item.adid}}</view>
+<view   style=' margin-left:10px;width:125px;height:25px;text-align: center;; background-color: #B22222;color:white;' data-id='{{item.id}}' bindtap='shanchu'>删除话题</view>
+</view>
+
+</view>

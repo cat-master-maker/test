@@ -1,0 +1,57 @@
+.input{
+  height: 30px;
+  border: 3rpx solid #aaa;
+  border-radius: 5%;
+   margin: 10px;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0rpx solid #aaa;
+  border-bottom: 2rpx solid #aaa;
+}
+.header-item{
+  font-size: 13px;
+  color:#aaa; 
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+  .datainput{
+  border: 0rpx solid #aaa;
+  border-bottom: 1rpx solid #aaa;
+  font-size: 20px;
+  margin-top: 20px;
+  }
+  .datatextarea{
+  border: 0rpx solid #aaa;
+  border-bottom: 1rpx solid #aaa;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 100%;
+  }
+
+
+  .shanchu{
+  height: 30px;
+  font-size: 15px;
+  background-color:#EEE8CD;
+  color:#aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.work{
+   border: 0rpx solid #aaa;
+    color:#aaa;
+}

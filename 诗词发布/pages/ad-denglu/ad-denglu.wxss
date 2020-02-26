@@ -1,0 +1,14 @@
+.input{
+  height: 30px;
+  border: 3rpx solid #aaa; 
+  border-radius: 5%;
+   margin: 20px;
+}
+.header{
+  margin-top: 200px;
+  text-align: center;
+}
+.button-header{
+  display: flex;
+  flex-direction: column;
+}

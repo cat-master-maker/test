@@ -1,0 +1,15 @@
+
+  .datainput{
+  border: 0rpx solid #aaa;
+  border-bottom: 1rpx solid #aaa;
+  font-size: 20px;
+  margin-top: 20px;
+  }
+  .datatextarea{
+  border: 0rpx solid #aaa;
+  border-bottom: 1rpx solid #aaa;
+  font-size: 20px;
+  height: 400px;
+  margin-top: 20px;
+  width: 100%;
+  }

@@ -1,0 +1,20 @@
+<view class='header'>
+<view    style='color:{{color1}}; border-bottom: {{boder1}}rpx solid {{color1}};'         bindtap="suoyou" class='header-item'>所有</view>
+<view    style='color:{{color2}}; border-bottom: {{boder2}}rpx solid {{color2}};' bindtap="jingxuan" class='header-item'>精选</view>
+<view    bindtap="tianjia"  class='header-item'><image    mode='widthFix' style="width: 25px;"  src='/pages/img/写字.png'></image></view>
+</view>
+
+ 
+<view wx:for='{{work.data}}' wx:key='item.id' >
+<view  bindtap='userpage' data-id='{{item.writerid}}'  class='user-info'>
+<image  class='user-img'   src='{{item.userimg}}' ></image>
+<view  class='user-name' >{{item.username}}</view>
+<view   wx:if='{{item.good==1}}' class='user-name'  style=' margin-left:10px;width:25px;height:25px;text-align: center;; background-color: #B22222;color:white;'>精</view>
+</view>
+<view class='work' bindtap='wordpage' data-id='{{item.id}}'>
+<text class='work-title'>{{item.title}}</text>
+<text class='work-text'>{{item.text}}</text>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{item.img}}' src='{{item.img}}'></image></view>
+</view>

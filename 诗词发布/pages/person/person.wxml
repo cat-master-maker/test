@@ -1,0 +1,44 @@
+
+<view  style='display: flex;flex-direction: column;margin-top:30px;'
+ wx:if='{{!user.id}}'>
+
+
+<view style='text-align:center;margin-top:30px;'>未登录</view>
+<view style='text-align:center;margin-top:30px;'>
+<image   bindtap='caidan' mode='widthFix' style="width: 100px;"  src='/pages/img/登录.png'></image></view>
+<button  style='margin-top:30px;width:100%;' type='primary'  bindtap='denglu' >
+登录</button> 
+
+</view>
+
+
+<view wx:if='{{user.id}}'>
+
+<view style=' display: flex;flex-direction: row-reverse; margin:10px;'><image   bindtap='caidan' mode='widthFix' style="width: 25px;"  src='/pages/img/设置.png'></image></view>
+<view  wx:if='{{user.id}}' style='  text-align: center;'>
+      <image  class='userinfo-avatar' src="{{user.img}}"  class="userinfo-avatar" mode="cover"></image>
+<view class='username'>{{user.name}}</view>
+<view class='username'>{{user.sex}}-{{user.region}}</view>
+<view class='username'>{{user.beizhu}}</view>
+
+<view class='userdata'>
+<view class='data'><view style='color: #aaa;'>精品</view><view>{{userdata.good["0"]["count(*)"]}}</view></view>
+<view class='data'><view style='color: #aaa;'>点赞</view><view>1</view></view>
+<view class='data'><view style='color: #aaa;'>发布</view><view>{{userdata.all["0"]["count(*)"]}}</view></view>
+</view>
+</view>
+
+<view wx:for='{{userdata.work}}' wx:key='item.id' >
+<view class='user-info'>
+<view   wx:if='{{item.good==1}}' class='user-name'  style=' margin-left:10px;width:25px;height:25px;text-align: center;; background-color: #B22222;color:white;'>精</view>
+</view>
+<view class='work'>
+<view class='work-title'>{{item.title}}</view>
+<view class='work-text'>{{item.text}}</view>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{item.img}}' src='{{item.img}}'></image></view>
+</view>
+
+
+</view>

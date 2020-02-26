@@ -1,0 +1,70 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0rpx solid #aaa;
+  border-bottom: 2rpx solid #aaa;
+}
+.header-item{
+  font-size: 13px;
+  color:#aaa; 
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input{
+  height: 30px;
+  border: 3rpx solid #aaa;
+  border-radius: 5%;
+   margin: 10px;
+}
+
+.xingbie{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+.user-info{
+  display: flex;
+  flex-direction: row;
+  border:0rpx solid #aaa; 
+  border-bottom:3rpx solid #aaa; 
+  margin-left: 5px;
+}
+
+
+.user-header{
+  display: inline-block;
+}
+.user-img {
+  width: 30px;
+  border-radius: 20%;
+  border:3rpx solid #aaa; 
+  margin: 5px;
+}
+
+
+.user-name {
+  color: #aaa;
+  margin: 5px;
+}
+.chaxun{
+  height: 30px;
+  font-size: 15px;
+  background-color:#EEE8CD;
+  color:#aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+
+
+
+
+<view   style='  text-align: center;'>
+      <image  class='userinfo-avatar' src="{{user.data['0'].img}}"  class="userinfo-avatar" mode="cover"></image>
+
+<view class='username'>{{user.data['0'].name}}</view>
+<view class='username'>{{user.data['0'].sex}}-{{user.data['0'].region}}</view>
+<view class='username'>{{user.data['0'].beizhu}}</view>
+
+<view class='userdata'>
+<view class='data'><view style='color: #aaa;'>精品</view><view>{{userdata.good["0"]["count(*)"]}}</view></view>
+<view class='data'><view style='color: #aaa;'>点赞</view><view>12</view></view>
+<view class='data'><view style='color: #aaa;'>发布</view><view>{{userdata.all["0"]["count(*)"]}}</view></view>
+</view>
+</view>
+
+<view wx:for='{{userdata.work}}' wx:key='item.id' >
+<view class='user-info'>
+<view   wx:if='{{item.good==1}}' class='user-name'  style=' margin-left:10px;width:25px;height:25px;text-align: center;; background-color: #B22222;color:white;'>精</view>
+</view>
+<view class='work'>
+<view class='work-title'>{{item.title}}</view>
+<view class='work-text'>{{item.text}}</view>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{item.img}}' src='{{item.img}}'></image></view>
+</view>
+
+

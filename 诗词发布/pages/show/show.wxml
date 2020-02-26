@@ -1,0 +1,21 @@
+
+<form style=''  bindsubmit='onSubmit' bindreset='onReset'>
+ 
+<view>标题</view>
+  <input class='datainput' name='title' type='text' placeholder='请输入标题'/>
+
+<view>正文</view>
+  <textarea  class='datatextarea' name='word' selectable space
+  decode   maxlength="-1" auto-height  placeholder="正文内容" />
+
+<image wx:if='{{src}}' src='{{src}}' mode='widthFix'></image>
+<image  bindtap="chooseImage" src='/pages/img/添加.png' mode='widthFix' style="width: 100px;" ></image>
+<view >
+  <button type='primary' form-type='submit'>提交</button>
+  <button type='default'   form-type='reset'>重置</button>
+</view>
+</form>
+
+
+
+

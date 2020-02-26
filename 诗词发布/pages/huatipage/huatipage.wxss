@@ -1,0 +1,53 @@
+.user-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.user-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  border-radius: 20%;
+}
+
+.user-name {
+  color: #aaa;
+  margin-top: 30px;
+}
+.work{
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.work-title{
+  text-align: center;
+  font-size: 50rpx;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.work-text{
+  color:#aaa; 
+  font-size: 35rpx;
+  line-height: 25px;
+}
+.work-img{
+  text-align: center;
+}
+
+.bottom{
+  border-top: 1rpx solid #aaa;
+  display: flex; 
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.comment{
+  border-top: 1rpx solid #aaa;
+  display: flex; 
+  flex-direction: row;
+  margin-top:20px;
+}
+

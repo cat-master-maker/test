@@ -1,0 +1,9 @@
+
+<view wx:for='{{work.data}}' wx:key='item.id' bindtap='huatipage' data-id='{{item.id}}' >
+<view class='work'>
+<text class='work-title'>{{item.title}}</text>
+<text class='work-text'>{{item.text}}</text>
+</view>
+<view  class='work-img'>
+<image  wx:if='{{item.img}}' src='{{item.img}}'></image></view>
+</view>

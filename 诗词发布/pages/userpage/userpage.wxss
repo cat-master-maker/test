@@ -1,0 +1,64 @@
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.username{
+font-size: 15px;
+color: #aaa;
+}
+.userdata{
+  margin-top: 20px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.data{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 0rpx solid #aaa;
+  border-left: 1rpx solid #aaa;
+  font-size: 20px;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.user-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  border-radius: 20%;
+}
+
+.user-name {
+  color: #aaa;
+  margin-top: 30px;
+}
+.work{
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  border: 3rpx solid #D4D4D4;
+  border-left-width: 5px;
+  border-left-color: #B22222;
+
+}
+.work-title{
+  text-align: center;
+  font-size: 35rpx;
+}
+.work-text{
+  text-align: center;
+  color:#aaa; 
+  font-size: 30rpx;
+}
+.work-img{
+  text-align: center;
+}
